@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>紳士の嗜み</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/static.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap-grid.min.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/static.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-wap">
+            <div class="hunbergar_wap">
+                <div id="hunbergar" class="hunbergar">
+                    <p class="menu">メニュー</p>
+                </div>
+                <div class="hunbergar">
+                    <p class="menu">ご案内</p>
+                </div>
+                <div class="hunbergar">
+                    <p class="menu">チュートリアル</p>
+                </div>
+                <div class="hunbergar">
+                    <p class="menu">チャット</p>
+                </div>
+                <div class="hunbergar">
+                    <p class="menu">ゲーム</p>
+                </div>
+                <div class="hunbergar">
+                    <p class="menu">ID登録</p>
+                </div>
+                <div class="hunbergar">
+                    <p class="menu">お問い合わせ</p>
+                </div>
+            </div>
+
+            <div class="form_wap">
+                <img src="{{url_for('static', filename='logo.svg')}}" alt="snake"/>
+                <!--  <h1>紳士<span class="title_name">の</span>嗜み</h1> -->
+                <div id="serch">
+                    <form action="/" name="search" method="get">
+                        <dl class="search">
+                            <dt>
+                                <input type="text" name="search" value="" placeholder="何が知りたい？" />
+                            </dt>
+                            <dd>
+                                <button>
+                                    <span></span>
+                                </button>
+                            </dd>
+                        </dl>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="contents_wrap">
+        <div id="side_bar" class="cf">
+            <ul id="event" class="list">
+                <li id="all">
+                    <a target="blank" href="file:///Users/adaruto/Desktop/yks-net/templates/all_video.html">→全ての動画</a>
+                </li>
+                <li id="title">
+                    <a target="blank" href="file:///Users/kawasakiyuji/Desktop/yks-net/templates/all_video.html">→タイトル別</a>
+                </li>
+                <li id="actor">
+                    <a target="blank" href="file:///Users/kawasakiyuji/Desktop/yks-net/templates/index.html">→女優一覧</a>
+                </li>
+                <li id="">
+                    <a target="blank" href="file:///Users/kawasakiyuji/Desktop/yks-net/templates/index.html">→お気に入り</a>
+                </li>
+            </ul>
+            <ul id="site" class="list">
+                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
+                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
+                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
+                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
+                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
+            </ul>
+            <ul id="select" class="list">
+                <p>動画の絞り込み</p>
+                <select class="selecter">
+                    <option>日本人</option>
+                    <option>アメリカ</option>
+                    <option>中国</option>
+                    <option>ロシア</option>
+                    <option>その他</option>
+                </select>
+
+                <p>表示順</p>
+                <select class="selecter">
+                    <option>再生時間順</option>
+                    <option>お気に入り</option>
+                    <option>日付順</option>
+                </select>
+
+                <p>再生時間↑↓</p>
+                <select class="selecter">
+                    <option>5分↑</option>
+                    <option>15分↑</option>
+                    <option>20分↑</option>
+                    <option>30分↑</option>
+                </select>
+            </ul>
+        </div>
+        {% block body %}
+        <div id="main_container">
+            <div id="new" class="main_video" class="cf">
+                <h2>最新動画</h2>
+                <ul class="slideSampleThumbnail">
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/30973485" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/16490523" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/30042231" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/30190627" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29464917" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/17596727" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/12441909" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/17596727" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/15129139" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/15057399" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/15057399" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/15057399" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/15057399" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                </ul>
+                <div class="left_button">≪</div>
+                <div class="right_button">≫</div>
+            </div>
+
+            <div id="recommend" class="main_video" class="cf">
+                <h2>おすすめ動画</h2>
+                <ul class="slideSampleThumbnail">
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29484583" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/32978797" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/28343535" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/28334637" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/28620627" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/28737153" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29163047" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29165763" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29166007" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29161799" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                </ul>
+                <div class="left_button">≪</div>
+                <div class="right_button">≫</div>
+            </div>
+
+
+            <div id="rank" class="main_video" class="cf">
+                <h2>ランキング</h2>
+                <ul class="slideSampleThumbnail">
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29603823" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29958971" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29603871" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29210793" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/30248295" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/30206947" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29205209" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29205725" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29128573" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29048589" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                </ul>
+                <div class="left_button">≪</div>
+                <div class="right_button">≫</div>
+            </div>
+
+            <div id="recently" class="main_video" class="cf">
+                <h2>最近視聴した動画</h2>
+                <ul class="slideSampleThumbnail">
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/15053187" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/15031245" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/15152517" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/11885403" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/22120505" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/25887897" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/29648601" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/30327243" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/28021235" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <iframe src="https://www.xvideos.com/embedframe/28439743" frameborder=0 width=100% height=100% scrolling=no allowfullscreen=allowfullscreen></iframe>
+                    </li>
+                </ul>
+                <div class="left_button">≪</div>
+                <div class="right_button">≫</div>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <script src="../static/js/nav.js"></script> 
+        {% endblock %}
+    </div>
+</body>
+</html>
