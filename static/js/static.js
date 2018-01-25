@@ -5,6 +5,15 @@ $(function () {
    menu_button();
 });
 
+function test(){
+      var jsonData = $.ajax({
+        type: "GET",
+        url: "/test",
+        async: false,
+    }).responseText;
+    console.log(jsonData)
+}
+
 function display_control(id, is_disp) {
   var disp = is_disp ? 'block' : 'none';
   $('#' + id).css('display', disp);
