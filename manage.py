@@ -1,3 +1,4 @@
+# coding: UTF-8
 from flask import Flask,render_template,jsonify
 import psycopg2
 import json
@@ -18,7 +19,7 @@ def render_allvideo():
 
 @app.route("/test")
 def ajax_test():
-    return json.dumps({'1':[aaaaaa],'2':[bbbbbbbb],'3':[ccccc]})
+    return json.dumps({'1':[123],'2':[234],'3':[111]})
 
 if __name__ == '__main__':
     app.run(debug=True)

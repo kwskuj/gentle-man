@@ -11,7 +11,7 @@ function test(){
         url: "/test",
         async: false,
     }).responseText;
-    console.log(jsonData)
+    return jsonData;
 }
 
 function display_control(id, is_disp) {
