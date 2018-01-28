@@ -9,7 +9,7 @@ $(function () {
 /**
  * ディスプレイコントロール
  * @param {*} id id名
- * @param {*} is_disp　trueかfalse 
+ * @param {*} is_disp　trueかfalse
  */
 function display_control(id, is_disp) {
   var disp = is_disp ? 'block' : 'none';
@@ -83,20 +83,16 @@ function right() {
   });
 }
 
-function test02(){
-  var url = ['https://www.xvideos.com/embedframe/30973485','https://www.xvideos.com/embedframe/16490523','https://www.xvideos.com/embedframe/30042231','https://www.xvideos.com/embedframe/30190627','https://www.xvideos.com/embedframe/29464917','https://www.xvideos.com/embedframe/17596727'];
-url.forEach(function(val,indx){
-  console.log (val);
-  var a_tag = $('<a href="">',{
-     id:'a' + '_' + indx
-   });
-  var iframe = $("<object >",{
-    src:val,
-  });
- a_tag.append(object);
-  $(".all-video_container_item" ).append(a_tag);
-});
-
-
-
-}
+// function test02(){
+//   var url = ['https://www.xvideos.com/embedframe/30973485','https://www.xvideos.com/embedframe/16490523','https://www.xvideos.com/embedframe/30042231','https://www.xvideos.com/embedframe/30190627','https://www.xvideos.com/embedframe/29464917','https://www.xvideos.com/embedframe/17596727'];
+// url.forEach(function(val,indx){
+//   console.log (val);
+//   var a_tag = $('<a href="">',{
+//      id:'a' + '_' + indx
+//    });
+//   var iframe = $("<object >",{
+//     src:val,
+//   });
+//  a_tag.append(object);
+//   $(".all-video_container_item" ).append(a_tag);
+// });
