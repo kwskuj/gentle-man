@@ -19,7 +19,30 @@ def render_allvideo():
 
 @app.route("/test")
 def ajax_test():
-    return json.dumps({'1':[123],'2':[234],'3':[111]})
+    return json.dumps({
+  "players": [
+    {
+      "id": "0001",
+      "name": "Nishikawa Haruki",
+      "position": "center fielder"
+    },
+    {
+      "id": "0002",
+      "name": "Matsumoto Go",
+      "position": "right fielder"
+    },
+    {
+      "id": "0003",
+      "name": "Brandon J. Laird",
+      "position": "third baseman"
+    } ,
+    {
+      "id": "0004",
+      "name": "Nakata Sho",
+      "position": "first baseman"
+    }
+  ]
+})
 
 if __name__ == '__main__':
     app.run(debug=True)

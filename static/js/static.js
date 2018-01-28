@@ -1,24 +1,42 @@
+// 初期読み込み
 $(function () {
   left();
   right();
-  display_control("contents_wrap", true);
-   menu_button();
+  menu_button();
 });
-
-function test(){
-      var jsonData = $.ajax({
-        type: "GET",
-        url: "/test",
-        async: false,
-    }).responseText;
-    return jsonData;
-}
-
+/**
+ * ディスプレイコントロール
+ * @param {*} id id名
+ * @param {*} is_disp　trueかfalse 
+ */
 function display_control(id, is_disp) {
   var disp = is_disp ? 'block' : 'none';
   $('#' + id).css('display', disp);
 }
 
+function test(){
+  var test;
+  $.ajax({
+    type: "GET",
+    url: "/test",
+  }).done(function (data) {
+   test = JSON.parse(data)
+   console.log(test)
+   return test
+  }).fail(function () {
+    console.log("fuck")
+  });
+}
+
+function test_2(){
+  test().forEach(function(val,idx) {
+    console.log(val +"/"+idx)
+  });
+}
+
+/**
+ * メニューボタンイベント
+ */
 function menu_button() {
   $(document).on('click', '#hunbergar', function () {
     a = 1
@@ -36,6 +54,9 @@ function menu_button() {
     }
   });
 }
+/**
+ * スライダー左ボタン
+ */
 function left() {
   $(document).on('click', '.left_button', function () {
     var clone = $(this).parent("div").children("ul").children("li:first").clone(true);
@@ -46,7 +67,9 @@ function left() {
     clone.clone(true).insertAfter($(this).parent("div").children("ul").children("li:last"));
   });
 }
-
+/**
+ * スライダー右ボタン
+ */
 function right() {
   $(document).on('click', '.right_button', function () {
     var clone = $(this).parent("div").children("ul").children("li:last").clone(true);
