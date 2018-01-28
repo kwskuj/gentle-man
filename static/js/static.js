@@ -22,7 +22,6 @@ function test(){
     datatype:"json"
   }).done(function(json){
    test = JSON.parse(json);
-   //console.log(test);
    console.log(test.players);
    return test;
   }).fail(function () {
@@ -33,7 +32,6 @@ function test(){
 function test_2(){
 
   var test_test = test();
-  //console.log(test_test)
 }
 
 /**
