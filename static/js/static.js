@@ -19,19 +19,21 @@ function test(){
   $.ajax({
     type: "GET",
     url: "/test",
-  }).done(function (data) {
-   test = JSON.parse(data)
-   console.log(test)
-   return test
+    datatype:"json"
+  }).done(function(json){
+   test = JSON.parse(json);
+   //console.log(test);
+   console.log(test.players);
+   return test;
   }).fail(function () {
     console.log("fuck")
   });
 }
 
 function test_2(){
-  test().forEach(function(val,idx) {
-    console.log(val +"/"+idx)
-  });
+
+  var test_test = test();
+  //console.log(test_test)
 }
 
 /**
