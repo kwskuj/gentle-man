@@ -14,9 +14,11 @@
     justify-content: space-around; }
     .all-video_container_nav {
       position: fixed;
+      display:  flex;
       top: 0;
       right: 0;
-      z-index: 10; }
+      z-index: 10;
+      }
       .all-video_container_nav a {
         color: #fff;
         font-weight: bold;
@@ -27,6 +29,7 @@
         .all-video_container_nav a:hover {
           background: #6b0d0d; }
     .all-video_container_item {
+      display: flex;
       width: 18.5%;
       min-width: 150px;
       margin-top: 40px;
@@ -38,7 +41,8 @@
       -webkit-transition: -webkit-transform 0.3s linear;
       -o-transition: -o-transform 0.3s linear;
       -ms-transition: -ms-transform 0.3s linear;
-      transition: transform 0.3s linear; }
+      transition: transform 0.3s linear;
+      }
       .all-video_container_item:hover {
         -webkit-transform: scale(1.2);
             -moz-transform: scale(1.2);

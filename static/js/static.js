@@ -3,6 +3,7 @@ $(function () {
   right();
   display_control("contents_wrap", true);
    menu_button();
+   test02();
 });
 
 function test(){
@@ -56,4 +57,22 @@ function right() {
     $(this).parent("div").children("ul").children("li:last").remove();
     clone.clone(true).insertBefore($(this).parent("div").children("ul").children("li:first"));
   });
+}
+
+function test02(){
+  var url = ['https://www.xvideos.com/embedframe/30973485','https://www.xvideos.com/embedframe/16490523','https://www.xvideos.com/embedframe/30042231','https://www.xvideos.com/embedframe/30190627','https://www.xvideos.com/embedframe/29464917','https://www.xvideos.com/embedframe/17596727'];
+url.forEach(function(val,indx){
+  console.log (val);
+  var a_tag = $('<a href="">',{
+     id:'a' + '_' + indx
+   });
+  var iframe = $("<object >",{
+    src:val,
+  });
+ a_tag.append(object);
+  $(".all-video_container_item" ).append(a_tag);
+});
+
+
+
 }
