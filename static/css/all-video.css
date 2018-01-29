@@ -11,7 +11,8 @@
   .all-video_container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; }
+    justify-content: space-around;
+    }
     .all-video_container_nav {
       position: fixed;
       display:  flex;
@@ -26,15 +27,17 @@
         font-size: 21px;
         background: #f34040;
         border: 2px solid #fff;
-        border-radius: 23px; }
+        border-radius: 23px;
+        width:  100%;
+        }
         .all-video_container_nav a:hover {
           background: #6b0d0d; }
           .all-video_container_nav img {
             margin-top: -16px;
           }
     .all-video_container_item {
-      display: flex;
-      width: 18%;
+      /* display: flex; */
+      width: 19.1%;
       /* height: 100%; */
       min-width: 150px;
       margin-top: 40px;
@@ -49,11 +52,11 @@
       transition: transform 0.3s linear;
       }
       .all-video_container_item:hover {
-        -webkit-transform: scale(1.2);
-            -moz-transform: scale(1.2);
-            -o-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            transform: scale(1, 2);
+        -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1, 1);
         border-radius: 5px; }
       .all-video_container_item img {
         width: 100%;

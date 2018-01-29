@@ -16,7 +16,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {margin:0;padding:0;border:0;outline:0;/* font-size:100%; */vertical-align:baseline;background:transparent;position:  relative;}
+time, mark, audio, video {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;position:  relative;}
 body {
 line-height:1;
 }
@@ -35,13 +35,7 @@ q:before, q:after {
 content:'';
 content:none;
 }
-a {
-margin:0;
-padding:0;
-font-size:100%;
-vertical-align:baseline;
-background:transparent;
-}
+a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
 /* change colours to suit your needs */
 ins {
 background-color:#ff9;
