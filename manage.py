@@ -17,6 +17,10 @@ def render_allvideo():
    
     return render_template("all_video.html")
 
+# @app.route("/DBtest")
+# def db_get():
+      
+
 @app.route("/test")
 def ajax_test():
     return json.dumps({
@@ -43,5 +47,6 @@ def ajax_test():
     }
   ]
 })
+
 if __name__ == '__main__':
     app.run(debug=True)
