@@ -24,7 +24,7 @@ function test(){
   }).done(function(data){
    test = JSON.parse(data);
    test.forEach(function(val,idx) {
-     console.log(val[1])
+     console.log(val)
    });
    return test;
   }).fail(function () {

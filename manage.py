@@ -35,9 +35,11 @@ def ajax_test():
     cursor.execute('SELECT * FROM videos')
     
     test_data = cursor.fetchall()
-    
-    return json.dumps(test_data)
     cursor.close()
+
+    aaaa = json.dumps(test_data)
+    print(type(aaaa))
+    return aaaa
 
 if __name__ == '__main__':
     app.run(debug=True)
