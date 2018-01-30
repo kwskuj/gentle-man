@@ -21,32 +21,23 @@ def render_allvideo():
 # def db_get():
       
 
-@app.route("/test")
+@app.route("/test",methods=['GET'])
 def ajax_test():
-    return json.dumps({
-  "players": [
-    {
-      "id": "0001",
-      "name": "Nishikawa Haruki",
-      "position": "center fielder"
-    },
-    {
-      "id": "0002",
-      "name": "Matsumoto Go",
-      "position": "right fielder"
-    },
-    {
-      "id": "0003",
-      "name": "Brandon J. Laird",
-      "position": "third baseman"
-    } ,
-    {
-      "id": "0004",
-      "name": "Nakata Sho",
-      "position": "first baseman"
-    }
-  ]
-})
+    
+    connection = psycopg2.connect(
+      database ='postgres',
+      user ='kawasakiyuji',
+      host = 'localhost',
+      port = 5432
+      )
+    
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM videos')
+    
+    test_data = cursor.fetchall()
+    
+    return json.dumps(test_data)
+    cursor.close()
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -21,10 +21,11 @@ function test(){
   $.ajax({
     type: "GET",
     url: "/test",
-    datatype:"json"
-  }).done(function(json){
-   test = JSON.parse(json);
-   console.log(test.players);
+  }).done(function(data){
+   test = JSON.parse(data);
+   test.forEach(function(val,idx) {
+     console.log(val[1])
+   });
    return test;
   }).fail(function () {
     console.log("fuck")
