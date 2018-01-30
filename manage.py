@@ -37,9 +37,9 @@ def ajax_test():
     test_data = cursor.fetchall()
     cursor.close()
 
-    aaaa = json.dumps(test_data)
-    print(type(aaaa))
-    return aaaa
+    data = json.dumps(test_data)
+  
+    return json.dumps(data)
 
 if __name__ == '__main__':
     app.run(debug=True)
