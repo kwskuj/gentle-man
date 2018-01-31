@@ -37,6 +37,9 @@ def ajax_test():
     test_data = cursor.fetchall()
     cursor.close()
     
+    for row in test_data:
+        print(row)
+    
     return json.dumps(test_data)
 
 if __name__ == '__main__':
