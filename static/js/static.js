@@ -17,24 +17,21 @@ function display_control(id, is_disp) {
 }
 
 function test(){
-  var test;
+  var data;
   $.ajax({
     type: "GET",
     url: "/test",
-  }).done(function(data){
-   test = JSON.parse(data);
-   test.forEach(function(val,idx) {
+  }).done(function(json){
+   test_data = JSON.parse(json);
+    var data = test_data.forEach(function(val,idx) {
      console.log(val)
    });
-   return test;
-  }).fail(function () {
-    console.log("fuck")
+   return data;
   });
 }
 
 function test_2(){
-
-  var test_test = test();
+  test();
 }
 
 /**
