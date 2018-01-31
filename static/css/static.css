@@ -101,28 +101,25 @@ header {
 #side_bar {
   border : 1px solid #ffffff;
   width : 20%;
-  height : 100%;
+  height: 100%;
   float : left;
   border-radius : 5px;
   display : none;
 }
 #contents_wrap {
   width : 100%;
-  height : 100%;
+  height: 85%;
 }
 #main_container {
   width : 100%;
-  height : 100%;
-  padding-top: 27px;
+  height: 100%;
+  /* padding-top: 10px; */
   float : left;
   border : 1px solid #000000;
 }
 .main_video {
   width : 100%;
   height: 25%;
-  /* max-height: 180px; */
-  /* min-height: 180px; */
-  margin: -5px 0 0;
   border : 1px solid #000000;
   overflow: hidden;
   position:  relative;
@@ -273,7 +270,7 @@ input[type="text"]:focus {
   width : 100%;
   height: 100%;
   padding: 0px 0px 20px 0;
-  position : relative;
+  /* position : relative; */
   overflow: hidden;
 }
 .slideSampleThumbnail li {
