@@ -81,16 +81,16 @@ function right() {
   });
 }
 
-// function test02(){
-//   var url = ['https://www.xvideos.com/embedframe/30973485','https://www.xvideos.com/embedframe/16490523','https://www.xvideos.com/embedframe/30042231','https://www.xvideos.com/embedframe/30190627','https://www.xvideos.com/embedframe/29464917','https://www.xvideos.com/embedframe/17596727'];
-// url.forEach(function(val,indx){
-//   console.log (val);
-//   var a_tag = $('<a href="">',{
-//      id:'a' + '_' + indx
-//    });
-//   var iframe = $("<object >",{
-//     src:val,
-//   });
-//  a_tag.append(object);
-//   $(".all-video_container_item" ).append(a_tag);
-// });
+function test02(){
+   var url = ['https://www.xvideos.com/embedframe/30973485','https://www.xvideos.com/embedframe/16490523','https://www.xvideos.com/embedframe/30042231','https://www.xvideos.com/embedframe/30190627','https://www.xvideos.com/embedframe/29464917','https://www.xvideos.com/embedframe/17596727'];
+   url.forEach(function(val,indx){
+     console.log (val);
+     $('all-video_container_item',{
+        id:'div' + '_' + indx
+      });
+     var a_tag = $('<a href=""><img src="https://static-hw.xvideos.com/v3/img/player/icon-play.svg"></a>',{
+       src:val,
+     });
+     $(".all-video_container_item").append(a_tag);
+   });
+}
