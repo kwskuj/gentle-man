@@ -3,8 +3,8 @@ $(function () {
   left();
   right();
   display_control("contents_wrap", true);
-   menu_button();
-   test02();
+  menu_button();
+  test02();
 });
 /**
  * ディスプレイコントロール
@@ -16,22 +16,22 @@ function display_control(id, is_disp) {
   $('#' + id).css('display', disp);
 }
 
-function test(){
-  var data;
+function test() {
+  var test_data;
   $.ajax({
     type: "GET",
     url: "/test",
-  }).done(function(json){
-   test_data = JSON.parse(json);
-    var data = test_data.forEach(function(val,idx) {
-     console.log(val)
-   });
-   return data;
+  }).done(function (json) {
+    test_data = JSON.parse(json);
+    console.log(test_data[0])
+    return test_data;
   });
 }
 
-function test_2(){
-  test();
+function test_2() {
+  test().forEach(function(val,idx) {
+    console.log(val)
+  });
 }
 
 /**

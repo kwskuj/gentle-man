@@ -72,3 +72,8 @@ padding:0;
 input, select {
 vertical-align:middle;
 }
+.cf:after{    
+content: "";
+clear: both;
+display: block;
+}
