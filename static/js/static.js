@@ -96,10 +96,17 @@ function test02(){
    });
 }
 
+<<<<<<< HEAD
 function create_tag(){
   var url = "https://www.xvideos.com/embedframe/30973485"; 
+=======
+var url = "https://www.xvideos.com/embedframe/30973485";
+>>>>>>> 23838ef1ec0bb8b7c6645c9b68b50db92663bb6d
   var a_href = "href ="+'"'+ url +'"';
   console.log(a_href);
   var a_tag = $("<a " + a_href + "></a>")
   $("html").append(a_tag)
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 23838ef1ec0bb8b7c6645c9b68b50db92663bb6d
