@@ -96,14 +96,18 @@ function right() {
 
 function test02() {
   var url = ['https://www.xvideos.com/embedframe/30973485', 'https://www.xvideos.com/embedframe/16490523', 'https://www.xvideos.com/embedframe/30042231', 'https://www.xvideos.com/embedframe/30190627', 'https://www.xvideos.com/embedframe/29464917', 'https://www.xvideos.com/embedframe/17596727'];
-  url.forEach(function (val, indx) {
-    console.log(val);
+  var a_href = "href ="+'"'+ url +'"';
+  url.forEach(function (a_href, indx) {
+    console.log(a_href);
     $('all-video_container_item', {
       id: 'div' + '_' + indx
     });
-    var a_tag = $('<a href=""><img src="https://static-hw.xvideos.com/v3/img/player/icon-play.svg"></a>', {
-      src: val,
-    });
+    var a_tag = $('<a " + a_href + "><img src="https://static-hw.xvideos.com/v3/img/player/icon-play.svg"></a>')
     $(".all-video_container_item").append(a_tag);
   });
 }
+// var url = "https://www.xvideos.com/embedframe/30973485";
+//   var a_href = "href ="+'"'+ url +'"';
+//   console.log(a_href);
+//   var a_tag = $("<a " + a_href + "></a>")
+//   $("html").append(a_tag)
