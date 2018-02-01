@@ -5,6 +5,7 @@ $(function () {
   display_control("contents_wrap", true);
   menu_button();
   test02();
+  create_tag()
 });
 /**
  * ディスプレイコントロール
@@ -93,4 +94,12 @@ function test02(){
      });
      $(".all-video_container_item").append(a_tag);
    });
+}
+
+function create_tag(){
+  var url = "https://www.xvideos.com/embedframe/30973485"; 
+  var a_href = "href ="+'"'+ url +'"';
+  console.log(a_href);
+  var a_tag = $("<a " + a_href + "></a>")
+  $("html").append(a_tag)
 }
