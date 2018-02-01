@@ -84,6 +84,7 @@ function left() {
  * スライダー右ボタン
  */
 function right() {
+<<<<<<< HEAD
   $(document).on('click', '.right_button', function () {
     var clone = $(this).parent("div").children("ul").children("li:last").clone(true);
     $(this).parent("div").children("ul").children("li:last").animate({
@@ -107,3 +108,42 @@ function test02() {
     $(".all-video_container_item").append(a_tag);
   });
 }
+=======
+      $(document).on('click', '.right_button', function () {
+        var clone = $(this).parent("div").children("ul").children("li:last").clone(true);
+        $(this).parent("div").children("ul").children("li:last").animate({
+          right: -70
+        }, 50000);
+        $(this).parent("div").children("ul").children("li:last").remove();
+        clone.clone(true).insertBefore($(this).parent("div").children("ul").children("li:first"));
+      });
+<<<<<<< HEAD
+     var a_tag = $('<a href=""><img src="https://static-hw.xvideos.com/v3/img/player/icon-play.svg"></a>',{
+       src:val,
+     });
+     $(".all-video_container_item").append(a_tag);
+   });
+}
+var url = "https://www.xvideos.com/embedframe/30973485";
+  var a_href = "href ="+'"'+ url +'"';
+  console.log(a_href);
+  var a_tag = $("<a " + a_href + "></a>")
+  $("html").append(a_tag)
+=======
+    }
+
+function test02() {
+      var url = ['https://www.xvideos.com/embedframe/30973485', 'https://www.xvideos.com/embedframe/16490523', 'https://www.xvideos.com/embedframe/30042231', 'https://www.xvideos.com/embedframe/30190627', 'https://www.xvideos.com/embedframe/29464917', 'https://www.xvideos.com/embedframe/17596727'];
+      url.forEach(function (val, indx) {
+        console.log(val);
+        $('all-video_container_item', {
+          id: 'div' + '_' + indx
+        });
+        var a_tag = $('<a href=""><img src="https://static-hw.xvideos.com/v3/img/player/icon-play.svg"></a>', {
+          src: val,
+        });
+        $(".all-video_container_item").append(a_tag);
+      });
+    }
+>>>>>>> b7fb8f5fa23656de173dc4b2d7bd6f6e9444048b
+>>>>>>> 7406e0eb50f8ef19a252651fe92538f746b3f684
