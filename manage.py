@@ -17,10 +17,6 @@ def render_allvideo():
    
     return render_template("all_video.html")
 
-# @app.route("/DBtest")
-# def db_get():
-      
-
 @app.route("/new_video",methods=['GET'])
 def new_video():
     

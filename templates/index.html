@@ -40,7 +40,6 @@
                     <p class="menu">ご要望</p>
                 </div>
             </div>
-
             <div class="form_wap">
                 <a href="http://127.0.0.1:5000/"><img class="bounceInRight animated logo" src="{{url_for('static', filename='logo.svg')}}" alt="snake"/></a>
                 <!--  <h1>紳士<span class="title_name">の</span>嗜み</h1> -->
@@ -48,7 +47,7 @@
                     <form action="/" name="search" method="get">
                         <dl class="search">
                             <dt>
-                                <input type="text" name="search" value="" placeholder="何が知りたい？" />
+                                <input type="text" name="search" value="" placeholder="紳士的に検索" />
                             </dt>
                             <dd>
                                 <button>
@@ -78,13 +77,6 @@
                     <a href="file:///Users/kawasakiyuji/Desktop/yks-net/templates/index.html">→お気に入り</a>
                 </li>
             </ul>
-            <ul id="site" class="list">
-                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
-                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
-                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
-                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
-                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
-            </ul>
             <ul id="select" class="list">
                 <p>動画の絞り込み</p>
                 <select class="selecter">
@@ -109,6 +101,13 @@
                     <option>20分↑</option>
                     <option>30分↑</option>
                 </select>
+            </ul>
+            <ul id="site" class="list">
+                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
+                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
+                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
+                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
+                <img src="http://adf.shinobi.jp/static/images/banner/admax_468x60.gif">
             </ul>
         </div>
         {% block content %}{% endblock　%}

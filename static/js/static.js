@@ -23,7 +23,9 @@ function display_control(id, is_disp) {
  * ここでサーバーサイドにアクセスして
  * データベースから持ってきた画像を変数に格納して
  * タグに入れ込んで表出させてる
- * aタグはめんどかったからそのまま
+ */
+/**
+ * 最新動画
  */
 function new_video() {
   $.ajax({
@@ -53,7 +55,9 @@ function new_video() {
     });
   });
 }
-
+/**
+ * おすすめ動画
+ */
 function recommend() {
   $.ajax({
     type: "GET",
@@ -82,7 +86,9 @@ function recommend() {
     });
   });
 }
-
+/**
+ * ランキング
+ */
 function rank() {
   $.ajax({
     type: "GET",
@@ -111,7 +117,9 @@ function rank() {
     });
   });
 }
-
+/**
+ * 最近視聴した動画
+ */
 function recently() {
   $.ajax({
     type: "GET",
