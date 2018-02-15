@@ -1,0 +1,86 @@
+{% extends "index.html" %} {% block content %}
+<div id="maintenance">
+
+    <div id="new_video_url" class="wrap">
+        <form action="/new_video_insert" method="post">
+            <p>最新videoのURL</p>
+            <input class="input" name="new_video_url" type="text">
+            <p>最新videoの画像</p>
+            <input class="input" name="new_video_image" type="text">
+            <p>最新videoのタイトル</p>
+            <input class="input" name="new_video_title" type="text">
+            <p>最新videoの女優名</p>
+            <input class="input" name="new_video_actor" type="text">
+            <p>最新videoの再生時間</p>
+            <input class="input" name="new_video_PlayTime" type="text">
+            <p>最新videoの登録日</p>
+            <input class="input" name="new_video_DayTime" type="text">
+            <p>最新videoの国名</p>
+            <input class="input" name="new_video_country" type="text">
+
+            <button class="button" type="submit">登録</button>
+        </form>
+    </div>
+
+    <div id="recommend_video_url" class="wrap">
+        <form action="/recommend_video_insert" method="post">
+            <p>おすすめvideoのURL</p>
+            <input class="input" name="recommend_video_url" type="text">
+            <p>おすすめvideoの画像</p>
+            <input class="input" name="recommend_video_image" type="text">
+            <p>おすすめvideoのタイトル</p>
+            <input class="input" name="recommend_video_title" type="text">
+            <p>おすすめvideoの女優名</p>
+            <input class="input" name="recommend_video_actor" type="text">
+            <p>おすすめvideoの再生時間</p>
+            <input class="input" name="recommend_video_PlayData" type="text">
+            <p>おすすめvideoの登録日</p>
+            <input class="input" name="recommend_video_DayTime" type="text">
+            <p>おすすめvideoの国名</p>
+            <input class="input" name="recommend_video_country" type="text">
+
+            <button class="button" type="submit">登録</button>
+        </form>
+    </div>
+    <div id="rank_video_url" class="wrap">
+        <form action="/new_video_insert" method="post">
+            <p>ランキングvideoのURL</p>
+            <input class="input" name="new_video_url" type="text">
+            <p>ランキングvideoの画像</p>
+            <input class="input" name="new_video_image" type="text">
+            <p>ランキングvideoのタイトル</p>
+            <input class="input" name="new_video_title" type="text">
+            <p>ランキングvideoの女優名</p>
+            <input class="input" name="new_video_actor" type="text">
+            <p>ランキングvideoの再生時間</p>
+            <input class="input" name="new_video_PlayData" type="text">
+            <p>ランキングvideoの登録日</p>
+            <input class="input" name="new_video_DayTime" type="text">
+            <p>ランキングvideoの国名</p>
+            <input class="input" name="new_video_country" type="text">
+
+            <button class="button" type="submit">登録</button>
+        </form>
+    </div>
+    <div id="recently_video_url" class="wrap">
+        <form action="/new_video_insert" method="post">
+            <p>最近videoのURL</p>
+            <input class="input" name="new_video_url" type="text">
+            <p>最近videoの画像</p>
+            <input class="input" name="new_video_image" type="text">
+            <p>最近videoのタイトル</p>
+            <input class="input" name="new_video_title" type="text">
+            <p>最近videoの女優名</p>
+            <input class="input" name="new_video_actor" type="text">
+            <p>最近videoの再生時間</p>
+            <input class="input" name="new_video_PlayData" type="text">
+            <p>最近videoの登録日</p>
+            <input class="input" name="new_video_DayTime" type="text">
+            <p>最近videoの国名</p>
+            <input class="input" name="new_video_country" type="text">
+
+            <button class="button" type="submit">登録</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

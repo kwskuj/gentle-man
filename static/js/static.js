@@ -23,8 +23,8 @@ function display_control(id, is_disp) {
  * ここでサーバーサイドにアクセスして
  * データベースから持ってきた画像を変数に格納して
  * タグに入れ込んで表出させてる
- */
-/**
+ *
+ *
  * 最新動画
  */
 function new_video() {
@@ -40,17 +40,21 @@ function new_video() {
         class: "li_" + "new_video" + idx
       });
       var img = $("<img>", {
-        src: data,
+        src: data[1],
       });
       var a_tag = $("<a>", {
         target: "_blank",
-        href: "https://www.xvideos.com/embedframe/15057399",
+        href: data[0],
+      });
+      var p_tag = $("<p>", {
+        class: "title",
+        text: data[2]
       });
       var a_tag_img = $("<img>", {
         src: "https://static-hw.xvideos.com/v3/img/player/icon-play.svg",
       });
       a_tag.append(a_tag_img);
-      li_tag.append(a_tag, img);
+      li_tag.append(a_tag, img, p_tag);
       $(".slideSampleThumbnail_0").append(li_tag);
     });
   });
@@ -200,21 +204,3 @@ function right() {
     clone.clone(true).insertBefore($(this).parent("div").children("ul").children("li:first"));
   });
 }
-
-function test02() {
-  var url = ['https://www.xvideos.com/embedframe/30973485', 'https://www.xvideos.com/embedframe/16490523', 'https://www.xvideos.com/embedframe/30042231', 'https://www.xvideos.com/embedframe/30190627', 'https://www.xvideos.com/embedframe/29464917', 'https://www.xvideos.com/embedframe/17596727'];
-  var a_href = "href ="+'"'+ url +'"';
-  url.forEach(function (a_href, indx) {
-    console.log(a_href);
-    $('all-video_container_item', {
-      id: 'div' + '_' + indx
-    });
-    var a_tag = $('<a " + a_href + "><img src="https://static-hw.xvideos.com/v3/img/player/icon-play.svg"></a>')
-    $(".all-video_container_item").append(a_tag);
-  });
-}
-// var url = "https://www.xvideos.com/embedframe/30973485";
-//   var a_href = "href ="+'"'+ url +'"';
-//   console.log(a_href);
-//   var a_tag = $("<a " + a_href + "></a>")
-//   $("html").append(a_tag)

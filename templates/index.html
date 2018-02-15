@@ -12,6 +12,7 @@
     <script src="../static/js/jquery-3.2.1.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
     <script src="../static/js/static.js"></script>
+    <script src="../static/js/ajax.js"></script>
 </head>
 
 <body>
@@ -44,7 +45,7 @@
                 <a href="http://127.0.0.1:5000/"><img class="bounceInRight animated logo" src="{{url_for('static', filename='logo.svg')}}" alt="snake"/></a>
                 <!--  <h1>紳士<span class="title_name">の</span>嗜み</h1> -->
                 <div id="serch">
-                    <form action="/" name="search" method="get">
+                    <form action="/" name="search" method="POST">
                         <dl class="search">
                             <dt>
                                 <input type="text" name="search" value="" placeholder="紳士的に検索" />
