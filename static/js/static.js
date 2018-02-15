@@ -49,6 +49,8 @@ function new_video() {
       var p_tag = $("<p>", {
         class: "title",
         text: data[2]
+      }).css({
+        "padding-top":"1vh" 
       });
       var a_tag_img = $("<img>", {
         src: "https://static-hw.xvideos.com/v3/img/player/icon-play.svg",
@@ -72,20 +74,26 @@ function recommend() {
     test_data.forEach(function (val, idx) {
       var data = val
       var li_tag = $("<li>", {
-        class: "li_" + "recommend" + idx
+        class: "li_" + "recommend_video" + idx
       });
       var img = $("<img>", {
-        src: data,
+        src: data[1],
       });
       var a_tag = $("<a>", {
         target: "_blank",
-        href: "https://www.xvideos.com/embedframe/15057399",
+        href: data[0],
+      });
+      var p_tag = $("<p>", {
+        class: "title",
+        text: data[2]
+      }).css({
+        "padding-top":"1vh" 
       });
       var a_tag_img = $("<img>", {
         src: "https://static-hw.xvideos.com/v3/img/player/icon-play.svg",
       });
       a_tag.append(a_tag_img);
-      li_tag.append(a_tag, img);
+      li_tag.append(a_tag, img, p_tag);
       $(".slideSampleThumbnail_1").append(li_tag);
     });
   });
@@ -103,20 +111,26 @@ function rank() {
     test_data.forEach(function (val, idx) {
       var data = val
       var li_tag = $("<li>", {
-        class: "li_" + "rank" + idx
+        class: "li_" + "rank_video" + idx
       });
       var img = $("<img>", {
-        src: data,
+        src: data[1],
       });
       var a_tag = $("<a>", {
         target: "_blank",
-        href: "https://www.xvideos.com/embedframe/15057399",
+        href: data[0],
+      });
+      var p_tag = $("<p>", {
+        class: "title",
+        text: data[2]
+      }).css({
+        "padding-top":"1vh" 
       });
       var a_tag_img = $("<img>", {
         src: "https://static-hw.xvideos.com/v3/img/player/icon-play.svg",
       });
       a_tag.append(a_tag_img);
-      li_tag.append(a_tag, img);
+      li_tag.append(a_tag, img, p_tag);
       $(".slideSampleThumbnail_2").append(li_tag);
     });
   });
@@ -134,20 +148,26 @@ function recently() {
     test_data.forEach(function (val, idx) {
       var data = val
       var li_tag = $("<li>", {
-        class: "li_" + "recently" + idx
+        class: "li_" + "recently_video" + idx
       });
       var img = $("<img>", {
-        src: data,
+        src: data[1],
       });
       var a_tag = $("<a>", {
         target: "_blank",
-        href: "https://www.xvideos.com/embedframe/15057399",
+        href: data[0],
+      });
+      var p_tag = $("<p>", {
+        class: "title",
+        text: data[2]
+      }).css({
+        "padding-top":"1vh" 
       });
       var a_tag_img = $("<img>", {
         src: "https://static-hw.xvideos.com/v3/img/player/icon-play.svg",
       });
       a_tag.append(a_tag_img);
-      li_tag.append(a_tag, img);
+      li_tag.append(a_tag, img, p_tag);
       $(".slideSampleThumbnail_3").append(li_tag);
     });
   });

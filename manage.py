@@ -94,7 +94,7 @@ def new_video_insert():
         new_video = cur.fetchall()
         cur.close()
 
-        return json.dumps(id_num)
+        return render_template("maintenance.html")
 
 @app.route("/recommend_video_insert",methods=['POST'])
 def recommend_video_insert():
@@ -102,14 +102,14 @@ def recommend_video_insert():
     image = request.form['recommend_video_image']
     title = request.form['recommend_video_title']
     actor = request.form['recommend_video_actor']
-    country = request.form['recommend_video_PlayData']
+    country = request.form['recommend_video_country']
     playtime= request.form['recommend_video_DayTime']
-    daytime = request.form['recommend_video_country']
+    daytime = request.form['recommend_video_PlayData']
 
     with get_connection() as conn:
      conn.autocommit = True
      with conn.cursor() as cur:
-        cur.execute('SELECT id FROM new_video_table')
+        cur.execute('SELECT id FROM recommend_video_table')
         recommend_video = cur.fetchall()
         id_num = len(recommend_video) + 1 
         cur.execute('INSERT INTO recommend_video_table (id,video,videoimage,title,actor,country,daytime,playtime) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)', (id_num,url,image,title,actor,country,daytime,playtime,))
@@ -117,7 +117,53 @@ def recommend_video_insert():
         recommend_video = cur.fetchall()
         cur.close()
 
-        return json.dumps(recommend_video)
+        return render_template("maintenance.html")
+
+@app.route("/rank_video_insert",methods=['POST'])
+def rank_video_insert():
+    url = request.form['rank_video_url']
+    image = request.form['rank_video_image']
+    title = request.form['rank_video_title']
+    actor = request.form['rank_video_actor']
+    country = request.form['rank_video_country']
+    playtime= request.form['rank_video_DayTime']
+    daytime = request.form['rank_video_PlayData']
+
+    with get_connection() as conn:
+     conn.autocommit = True
+     with conn.cursor() as cur:
+        cur.execute('SELECT id FROM rank_video_table')
+        recommend_video = cur.fetchall()
+        id_num = len(recommend_video) + 1 
+        cur.execute('INSERT INTO rank_video_table (id,video,videoimage,title,actor,country,daytime,playtime) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)', (id_num,url,image,title,actor,country,daytime,playtime,))
+        cur.execute('SELECT id FROM rank_video_table')
+        rank_video = cur.fetchall()
+        cur.close()
+
+        return render_template("maintenance.html")
+
+@app.route("/recently_video_insert",methods=['POST'])
+def recently_video_insert():
+    url = request.form['recently_video_url']
+    image = request.form['recently_video_image']
+    title = request.form['recently_video_title']
+    actor = request.form['recently_video_actor']
+    country = request.form['recently_video_country']
+    playtime= request.form['recently_video_DayTime']
+    daytime = request.form['recently_video_PlayData']
+
+    with get_connection() as conn:
+     conn.autocommit = True
+     with conn.cursor() as cur:
+        cur.execute('SELECT id FROM recently_video_table')
+        recommend_video = cur.fetchall()
+        id_num = len(recommend_video) + 1 
+        cur.execute('INSERT INTO recently_video_table (id,video,videoimage,title,actor,country,daytime,playtime) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)', (id_num,url,image,title,actor,country,daytime,playtime,))
+        cur.execute('SELECT id FROM recently_video_table')
+        recently_video = cur.fetchall()
+        cur.close()
+
+        return render_template("maintenance.html")
 
 
 # @app.route("/server_test",methods=['GET'])
