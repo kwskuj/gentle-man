@@ -7,7 +7,6 @@ import cgi
 
 app = Flask(__name__)
 
-
 def get_connection():
     connection = psycopg2.connect(
         database ='postgres',
@@ -31,7 +30,6 @@ def render_allvideo():
 def maintenance():
     
     return render_template("maintenance.html")
-
 
 @app.route("/new_video",methods=['GET'])
 def new_video():   

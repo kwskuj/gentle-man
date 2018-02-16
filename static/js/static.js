@@ -24,7 +24,6 @@ function display_control(id, is_disp) {
  * データベースから持ってきた画像を変数に格納して
  * タグに入れ込んで表出させてる
  *
- *
  * 最新動画
  */
 function new_video() {
@@ -34,7 +33,6 @@ function new_video() {
   }).done(function (json) {
     var test_data = JSON.parse(json);
     console.log(test_data)
-    test_data.forEach(function (val, idx) {
       var data = val
       var li_tag = $("<li>", {
         class: "li_" + "new_video" + idx
